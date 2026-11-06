@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#4f46e5"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><title>برنامه روزانه من</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f1ff;--card:#fff;--tx:#241f45;--mu:#7a7798;--pr:#6d5dfc;--pr2:#efecff;--ok:#10b981;--wa:#f97316;--pk:#ec4899;--bd:#e6e2fb;--sh:0 6px 20px rgba(109,93,252,.12);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#12101f;--card:#1d1a33;--tx:#efedff;--mu:#a29fc4;--pr:#9a8cff;--pr2:#2a2550;--bd:#322d58;--sh:none}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#12101f;--card:#1d1a33;--tx:#efedff;--mu:#a29fc4;--pr:#9a8cff;--pr2:#2a2550;--bd:#322d58;--sh:none}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Vazirmatn,Tahoma,system-ui,sans-serif;font-size:15px;line-height:1.7;padding-bottom:96px}
+main{max-width:560px;margin:0 auto;padding:14px}
+h1{font-size:21px;margin:4px 0 10px}h2{font-size:16px;margin:0 0 10px}
+.card{background:var(--card);border-radius:20px;padding:16px;margin-bottom:12px;box-shadow:var(--sh);border:1px solid var(--bd)}
+.mu{color:var(--mu);font-size:13px}
+.hero{background:linear-gradient(135deg,#6d5dfc,#a855f7 55%,#ec4899);color:#fff;border-radius:24px;padding:20px 18px;margin-bottom:14px;position:relative;box-shadow:0 10px 26px rgba(168,85,247,.35)}
+.hero h1{margin:0;font-size:22px}.hero p{margin:2px 0 0;opacity:.9;font-size:13px}
+.av{position:absolute;left:14px;top:14px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.22);font-size:22px;padding:0;color:#fff}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.rb{background:var(--card);border-radius:18px;padding:10px 4px;text-align:center;box-shadow:var(--sh);border:1px solid var(--bd)}
+.rb div{font-size:12px;color:var(--mu);line-height:1.4}.rb b{font-size:13px;display:block;color:var(--tx)}
+input,select,textarea{width:100%;font:inherit;color:var(--tx);background:var(--bg);border:1.5px solid var(--bd);border-radius:14px;padding:10px 12px;margin:4px 0 10px}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--pr)}
+label{font-size:13px;color:var(--mu)}
+button{font:inherit;border:0;border-radius:14px;padding:11px 14px;background:linear-gradient(135deg,var(--pr),#a855f7);color:#fff;font-weight:600;width:100%}
+button.sec{background:var(--pr2);color:var(--pr)}button.dn{background:linear-gradient(135deg,#f97316,#ec4899)}button:disabled{opacity:.55}
+.row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--bd)}
+.row:last-child{border:0}.row>div{flex:1}
+.row input[type=checkbox]{width:24px;height:24px;margin:0;accent-color:var(--ok)}
+.x{width:auto;background:none;color:var(--wa);padding:4px 8px}
+.bar{height:11px;background:var(--pr2);border-radius:9px;overflow:hidden;margin:8px 0}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--ok),#14b8a6);border-radius:9px}
+nav{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--bd);display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 20px rgba(109,93,252,.1)}
+nav button{background:none;color:var(--mu);padding:3px 0;font-size:11px;font-weight:400;flex:1;border-radius:12px}
+nav button.on{color:var(--pr);font-weight:800;background:var(--pr2)}nav span{display:block;font-size:20px;line-height:1.3}
+.msg{padding:10px 13px;border-radius:16px;margin:7px 0;white-space:pre-wrap;max-width:88%}
+.me{background:linear-gradient(135deg,var(--pr),#a855f7);color:#fff;margin-inline-end:auto;border-end-start-radius:4px}
+.bot{background:var(--pr2);border-end-end-radius:4px}
+.alert{background:linear-gradient(135deg,#f97316,#ec4899);color:#fff;border-radius:18px;padding:12px 14px;margin-bottom:12px;font-weight:600}
+.tm{font-size:48px;font-weight:800;text-align:center;letter-spacing:1px;margin:6px 0 12px}
+.chip{display:inline-block;width:auto;background:var(--pr2);color:var(--pr);padding:5px 12px;margin:0 0 6px 6px;border-radius:20px;font-size:13px}
+.tr{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 0}
+.tp{display:flex;align-items:center;gap:4px;width:150px;direction:ltr}.tp select{margin:0}
+.tl{display:flex;gap:12px;align-items:center;padding:8px 0}
+.tl b{background:var(--pr2);color:var(--pr);border-radius:12px;padding:3px 10px;min-width:72px;text-align:center}
+.hero svg{position:absolute;left:0;bottom:0;width:100%;height:56px;opacity:.18;pointer-events:none}
+.chip.on{background:var(--pr);color:#fff}
+.tile{background:linear-gradient(160deg,var(--pr2),var(--card));border:2px solid var(--bd);border-radius:16px;padding:8px 2px;text-align:center;font-size:11px;color:var(--tx);font-weight:600;width:auto}
+.tile span{display:block;font-size:30px;line-height:1.3}.tile.on{border-color:var(--pr);background:var(--pr2)}
+.gls{display:flex;gap:6px;justify-content:space-between}.gl{width:auto;flex:1;padding:8px 0;background:var(--pr2);font-size:20px;opacity:.35}.gl.on{opacity:1;background:#dbeafe}
+:root{--bg:#f6f7fb;--card:#fff;--tx:#0f172a;--mu:#64748b;--pr:#4f46e5;--pr2:#eef2ff;--bd:#e8ebf3;--sh:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06);--navbg:rgba(255,255,255,.85)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0f19;--card:#141a29;--tx:#f1f5f9;--mu:#94a3b8;--pr:#818cf8;--pr2:#1e2542;--bd:#242c40;--sh:none;--navbg:rgba(20,26,41,.88)}}
+:root[data-theme="dark"]{--bg:#0b0f19;--card:#141a29;--tx:#f1f5f9;--mu:#94a3b8;--pr:#818cf8;--pr2:#1e2542;--bd:#242c40;--sh:none;--navbg:rgba(20,26,41,.88)}
+body{padding-bottom:112px}h1{font-size:24px;font-weight:800}
+.card{border-radius:22px;padding:18px}.rb{border-radius:20px}
+.hero{background:linear-gradient(135deg,#4338ca,#6d28d9 55%,#be185d);border-radius:28px;padding:24px 20px;box-shadow:0 18px 40px -12px rgba(79,70,229,.5)}
+button{background:var(--pr);border-radius:14px;padding:12px 16px;transition:transform .12s}button:active{transform:scale(.97)}
+nav{left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:6px;border-radius:26px;border:1px solid var(--bd);background:var(--navbg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 30px rgba(15,23,42,.14)}
+nav button{background:none;border-radius:20px;padding:6px 0 4px}nav button.on{background:var(--pr2);color:var(--pr)}
+nav span{display:flex;justify-content:center}nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.tm{font-variant-numeric:tabular-nums}
+.hdr{display:flex;align-items:center;justify-content:space-between;margin:2px 0 16px}.hdr h1{order:1;font-size:20px;margin:0}.hdr p{display:none}
+.hdr .av{position:static;order:2;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#4f46e5,#db2777);font-size:18px;color:#fff;padding:0;box-shadow:0 6px 16px -4px rgba(79,70,229,.5)}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<nav id="nav"></nav>
+<script>
+const $=s=>document.querySelector(s);
+const e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const PD='۰۱۲۳۴۵۶۷۸۹';
+const fa=s=>String(s).replace(/\d/g,d=>PD[d]);
+const en=s=>String(s).replace(/[۰-۹]/g,d=>PD.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[٫،,]/g,'.');
+const num=s=>parseFloat(en(s))||0;
+const f=n=>fa(Math.round(Number(n)||0));
+const f1=n=>fa((Math.round(n*10)/10).toString()).replace('.','٫');
+const pad=n=>String(n).padStart(2,'0');
+const tf=(h,m)=>fa(pad(h))+':'+fa(pad(m));
+const hms=s=>{s=Math.floor(s);return fa(pad(Math.floor(s/3600)))+':'+fa(pad(Math.floor(s%3600/60)))+':'+fa(pad(s%60))};
+const dur=s=>{const m=Math.round(s/60);if(s<60)return f(s)+' ثانیه';const h=Math.floor(m/60);return (h?f(h)+' ساعت'+(m%60?' و ':''):'')+(m%60?f(m%60)+' دقیقه':'')};
+let mem=null;
+function load(){try{return JSON.parse(localStorage.getItem('dp2'))}catch(x){return mem}}
+let S=load()||{p:null,d:{},timer:null};S.habits=S.habits||[{id:1,t:'مسواک زدن'},{id:2,t:'خوردن صبحانه'},{id:3,t:'مرور درس‌ها'},{id:4,t:'مرتب کردن میز'},{id:5,t:'خوابیدن سر وقت'}];
+function save(){try{localStorage.setItem('dp2',JSON.stringify(S))}catch(x){mem=S}}
+function key(){const t=new Date();return t.getFullYear()+'-'+(t.getMonth()+1)+'-'+t.getDate()}
+function day(){const d=S.d[key()]||(S.d[key()]={foods:[],plan:null,done:{},extra:[],study:[]});d.hab=d.hab||{};d.water=d.water||0;return d}
+let tab=S.p?'home':'profile',chat=[],busy='',err='',rang=false,ringNow=false,SUBS=[];
+
+function calc(){
+ const p=S.p,d=day();
+ const bmr=10*p.w+6.25*p.h-5*p.age+(p.sex==='m'?5:-161),tdee=bmr*1.4;
+ let target=p.goal<p.w-0.5?tdee-400:p.goal>p.w+0.5?tdee+300:tdee;
+ target=Math.max(target,1500);
+ const eaten=d.foods.reduce((a,x)=>a+x.kcal,0);
+ const burned=(d.plan?d.plan.exercises.reduce((a,x,i)=>a+(d.done[i]?x.kcal:0),0):0)+d.extra.reduce((a,x)=>a+x.kcal,0);
+ const study=d.study.reduce((a,x)=>a+x.sec,0);
+ const ex=d.plan?d.plan.exercises.length:0,exd=d.plan?Object.values(d.done).filter(Boolean).length:0;
+ return{target,eaten,burned,study,net:eaten-burned,ex,exd};
+}
+function bedMin(){const p=S.p;return((p.wakeH*60+p.wakeM-p.sleepH*60)%1440+1440)%1440}
+async function ai(prompt,json){
+ if(!window.claude)throw{code:'na'};
+ const s=await claude.use('sample');if(!s)throw{code:'na'};
+ return json?await s.json(prompt):(await s(prompt,{cache:false})).text;
+}
+function aiErr(x){return x&&x.code==='na'?'دستیار هوشمند فقط داخل برنامه‌ی کلود کار می‌کند و اینجا در دسترس نیست.':'مشکلی پیش آمد، دوباره امتحان کن.'}
+function prof(){const p=S.p;return `دانش‌آموز، ${p.sex==='m'?'پسر':'دختر'}، ${p.age} ساله، قد ${p.h} سانتی‌متر، وزن ${p.w} کیلو، وزن هدف ${p.goal} کیلو`}
+
+function ring(p,col,t1,t2){
+ p=Math.max(0,Math.min(1,p||0));const C=213.6;
+ return `<div class="rb"><svg viewBox="0 0 80 80" width="76" height="76"><circle cx="40" cy="40" r="34" fill="none" stroke="var(--pr2)" stroke-width="8"/><circle cx="40" cy="40" r="34" fill="none" stroke="${col}" stroke-width="8" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-p)}" transform="rotate(-90 40 40)"/><text x="40" y="45" text-anchor="middle" font-size="15" font-weight="800" fill="var(--tx)" font-family="inherit">${f(p*100)}٪</text></svg><b>${t1}</b><div>${t2}</div></div>`;
+}
+function home(){
+ const c=calc(),p=S.p,left=p.w-p.goal;
+ return `${ringNow?'<div class="alert">⏰ وقت بیدار شدنه! صبح بخیر. برو سراغ ورزش امروز. <button class="sec" style="margin-top:8px" onclick="ringNow=false;render()">باشه</button></div>':''}
+ <div class="hdr"><button class="av" onclick="tab='profile';render()">👤</button><h1>سلام ${e(p.name||'')} 👋</h1><p>${new Date().toLocaleDateString('fa-IR',{weekday:'long',day:'numeric',month:'long'})}</p></div>
+ ${S.timer?'<div class="alert" style="background:linear-gradient(135deg,#10b981,#14b8a6)" onclick="tab=\'study\';render()">⏱ تایمر مطالعه‌ی «'+e(S.timer.name)+'» '+(S.timer.run?'در حال اجراست':'متوقف است')+'</div>':''}
+ <div class="g3" style="margin-bottom:12px">
+ ${ring(c.eaten/c.target,'#f97316','🍽️ تغذیه',f(c.eaten)+' از '+f(c.target))}
+ ${ring(c.study/(p.studyH*3600),'#6d5dfc','📚 مطالعه',f1(c.study/3600)+' از '+f1(p.studyH)+' ساعت')}
+ ${ring(c.ex?c.exd/c.ex:0,'#10b981','🏋️ ورزش',c.ex?f(c.exd)+' از '+f(c.ex)+' حرکت':'بدون برنامه')}</div>
+ ${calCard()}<div class="g2"><div class="card"><div class="mu">🔥 سوزانده‌شده</div><b style="font-size:22px">${f(c.burned)}</b> <span class="mu">کالری</span></div>
+ <div class="card"><div class="mu">⚖️ تا وزن هدف</div><b style="font-size:22px">${f1(Math.abs(left))}</b> <span class="mu">کیلو ${left>0?'کاهش':left<0?'افزایش':''}</span></div></div>
+ <div class="card"><h2>🗓️ برنامه‌ی امروز <span class="mu" style="font-weight:400">— ${new Date().toLocaleDateString('fa-IR',{weekday:'long',day:'numeric',month:'long'})}</span></h2>${timeline()}</div>${habitsCard()}<button class="sec" onclick="tab='coach';render()">🤖 از دستیار بپرس</button>`;
+}
+function timeline(){
+ if(S.blocks&&S.blocks.length)return S.blocks.map(x=>`<div class="tl"><b>${tf(x.h,x.m)}</b><span>${e(x.title)}</span></div>`).join('');
+ const p=S.p,w=p.wakeH*60+p.wakeM,b=bedMin();
+ const it=[[w,'⏰','بیدار شدن'],[p.gymH*60+p.gymM,'🏋️','رفتن به باشگاه'],[b,'🌙','رفتن به رخت‌خواب']].sort((a,b2)=>((a[0]-w+1440)%1440)-((b2[0]-w+1440)%1440));
+ return it.map(x=>`<div class="tl"><b>${tf(Math.floor(x[0]/60),x[0]%60)}</b><span>${x[1]} ${x[2]}</span></div>`).join('');
+}
+function profile(){
+ const p=S.p||{name:'',sex:'m',age:16,h:170,w:70,goal:65};
+ return `<h1>👤 پروفایل</h1><p class="mu">${S.p?'اطلاعات بدنی‌ات اینجاست.':'اول خودت رو معرفی کن تا برنامه و کالری‌ها دقیق حساب بشن.'}</p>
+ <div class="card"><label>اسم</label><input id="name" value="${e(p.name||'')}" placeholder="اسمت چیه؟">
+ <label>جنسیت</label><select id="sex"><option value="m" ${p.sex==='m'?'selected':''}>پسر</option><option value="f" ${p.sex==='f'?'selected':''}>دختر</option></select>
+ <div class="g2"><div><label>سن</label><input id="age" inputmode="decimal" value="${fa(p.age)}"></div><div><label>قد (سانتی‌متر)</label><input id="h" inputmode="decimal" value="${fa(p.h)}"></div>
+ <div><label>وزن فعلی (کیلو)</label><input id="w" inputmode="decimal" value="${fa(p.w)}"></div><div><label>وزن هدف (کیلو)</label><input id="goal" inputmode="decimal" value="${fa(p.goal)}"></div></div>
+ <button onclick="saveP()">ذخیره</button>${S.p?'<button class="sec" style="margin-top:8px" onclick="tab=\'home\';render()">بازگشت</button>':''}</div>`;
+}
+function saveP(){
+ const g=i=>$('#'+i).value,v={name:g('name').trim(),sex:g('sex'),age:num(g('age')),h:num(g('h')),w:num(g('w')),goal:num(g('goal'))};
+ if(!v.age||!v.h||!v.w||!v.goal)return;
+ S.p=Object.assign({wakeH:7,wakeM:0,gymH:17,gymM:0,sleepH:8,studyH:3,alarm:true},S.p||{},v);
+ save();tab='home';render();scrollTo(0,0);
+}
+function setP(k,v){S.p[k]=v;save();render()}
+const sel=(k,o,c)=>`<select onchange="setP('${k}',+this.value)">${o.map(x=>`<option value="${x[0]}" ${x[0]==c?'selected':''}>${x[1]}</option>`).join('')}</select>`;
+const HO=[...Array(24).keys()].map(i=>[i,fa(pad(i))]),MO=[0,15,30,45].map(i=>[i,fa(pad(i))]);
+const hal=(a,b,u)=>{const r=[];for(let i=a;i<=b;i+=.5)r.push([i,f1(i)+' '+u]);return r};
+const tp=(k,h,m)=>`<div class="tp">${sel(k+'H',HO,h)}<b>:</b>${sel(k+'M',MO,m)}</div>`;
+function plan(){
+ const p=S.p;
+ return `<h1>🗓️ برنامه‌ی روزانه</h1>
+ <div class="card"><h2>تنظیم ساعت‌ها</h2>
+ <div class="tr"><span>⏰ ساعت بیدار شدن</span>${tp('wake',p.wakeH,p.wakeM)}</div>
+ <div class="tr"><span>🏋️ ساعت باشگاه</span>${tp('gym',p.gymH,p.gymM)}</div>
+ <div class="tr"><span>🌙 مدت خواب</span><div class="tp" style="direction:rtl">${sel('sleepH',hal(5,10,'ساعت'),p.sleepH)}</div></div>
+ <div class="tr"><span>📚 هدف مطالعه</span><div class="tp" style="direction:rtl">${sel('studyH',hal(1,10,'ساعت'),p.studyH)}</div></div>
+ <div class="tr"><span>🔔 زنگ داخل برنامه</span><div class="tp" style="direction:rtl">${sel('alarm',[[1,'روشن'],[0,'خاموش']],p.alarm?1:0)}</div></div>
+ <div class="mu">زنگ فقط وقتی برنامه باز باشه صدا می‌ده. برای زنگ مطمئن، از ساعت خود گوشی هم استفاده کن.</div></div>
+ <div class="card"><h2>✨ ساخت برنامه از روی توضیح تو</h2><label>روزت رو توضیح بده: ساعت مدرسه، کلاس‌ها، هدف‌هات...</label><textarea id="sd" rows="3" placeholder="مثلاً: مدرسه ۸ تا ۱۳، بعدازظهر کلاس زبان، می‌خوام هر روز ورزش کنم و ۳ ساعت درس بخونم">${e(S.sd||'')}</textarea><button onclick="buildSched()" ${busy?'disabled':''}>${busy==='sched'?'در حال ساخت...':'ساخت برنامه‌ی روزانه'}</button>${S.blocks?'<button class="sec" style="margin-top:8px" onclick="S.blocks=null;save();render()">بازگشت به برنامه‌ی ساده</button>':''}${err&&tab==='plan'?`<p class="mu">${e(err)}</p>`:''}</div><div class="card"><h2>ترتیب روز تو</h2>${timeline()}</div>`;
+}
+function workout(){
+ const d=day();
+ return `<h1>🏋️ ورزش</h1>
+ <div class="card"><h2>🔥 ${f(calc().burned)} کالری سوزانده‌شده امروز</h2><span class="mu">حرکت‌های تیک‌خورده و فعالیت‌های ثبت‌شده با هم جمع می‌شن</span></div><div class="card"><label>برنامه‌ات رو توضیح بده تا برات بسازم</label><textarea id="wd" rows="3" placeholder="مثلاً: ۴۵ دقیقه وقت دارم، فقط دمبل دارم و می‌خوام شکم و بازو رو تقویت کنم">${e(S.wd||'')}</textarea></div><button onclick="genPlan2()" ${busy?'disabled':''}>${busy==='plan'?'در حال ساخت برنامه...':d.plan?'ساخت برنامه‌ی جدید':'✨ ساخت برنامه‌ی امروز با هوش مصنوعی'}</button>
+ ${err&&tab==='workout'?`<p class="mu">${e(err)}</p>`:''}
+ ${d.plan?`<div class="card" style="margin-top:12px"><h2>${e(d.plan.title)}</h2>${d.plan.exercises.map((x,i)=>`<label class="row" style="color:var(--tx);font-size:15px"><input type="checkbox" ${d.done[i]?'checked':''} onchange="tick(${i},this.checked)"><div>${e(x.name)}<div class="mu">${e(x.detail)} • ${f(x.kcal)} کالری</div></div></label>`).join('')}</div>`:''}
+ <div class="card" style="margin-top:12px"><h2>ثبت فعالیت و محاسبه‌ی کالری</h2>
+ <div class="g3" style="margin-bottom:10px">${ACT.map((a,i)=>`<button class="tile ${i===selAct?'on':''}" onclick="selAct=${i};render()"><span>${a[1]}</span>${a[0]}</button>`).join('')}</div><input id="em" inputmode="decimal" placeholder="چند دقیقه؟ مثلاً ۳۰"><div class="mu" style="margin-bottom:8px">کالری با توجه به وزن تو و نوع فعالیت حساب می‌شه</div><input id="ek" type="hidden" data-x="کالری سوزانده‌شده">
+ <button class="sec" onclick="addAct()">محاسبه و ثبت</button>
+ ${d.extra.map((x,i)=>`<div class="row"><div>${e(x.name)} <span class="mu">${f(x.kcal)} کالری</span></div><button class="x" onclick="delExtra(${i})">حذف</button></div>`).join('')}</div>`;
+}
+async function genPlan(){
+ busy='plan';err='';render();
+ try{
+  const dn=new Date().toLocaleDateString('fa-IR',{weekday:'long'});
+  const r=await ai(`تو مربی بدنسازی هستی. کاربر: ${prof()}. امروز ${dn} است و کاربر به باشگاه می‌رود. یک برنامه‌ی بدنسازی مناسب و ایمن برای امروز بساز (۶ تا ۸ حرکت، شامل گرم‌کردن و سردکردن، متناسب با هدف وزنی). همه‌ی متن‌ها را فارسی بنویس. فقط JSON برگردان، بدون هیچ متن دیگر: {"title":"عنوان کوتاه فارسی","exercises":[{"name":"نام فارسی حرکت","detail":"مثلاً ۳ ست × ۱۲ تکرار","kcal":عدد تقریبی کالری سوزانده‌شده}]}`,true);
+  if(!r||!Array.isArray(r.exercises))throw 0;
+  r.exercises=r.exercises.map(x=>({name:String(x.name),detail:String(x.detail||''),kcal:Math.round(+x.kcal||0)}));
+  const d=day();d.plan=r;d.done={};save();
+ }catch(x){err=aiErr(x)}
+ busy='';render();
+}
+function tick(i,v){day().done[i]=v;save();render()}
+function addExtra(){const n=$('#en').value.trim(),k=num($('#ek').value);if(!n||!k)return;day().extra.push({name:n,kcal:k});save();render()}
+function delExtra(i){day().extra.splice(i,1);save();render()}
+function food(){
+ const d=day(),c=calc(),over=c.eaten>c.target;
+ return `<h1>🍽️ تغذیه</h1>
+ <div class="card"><h2>${f(c.eaten)} از ${f(c.target)} کالری</h2><div class="bar"><i style="width:${Math.min(100,c.eaten/c.target*100)}%;${over?'background:linear-gradient(90deg,#f97316,#ec4899)':''}"></i></div>
+ <span class="mu">هدف روزانه برای رسیدن به ${f(S.p.goal)} کیلو حساب شده. خالص امروز (خورده − سوزانده): ${f(c.net)} کالری</span></div>
+ <div class="card"><label>امروز چی خوردی؟ هر چی دوست داری بنویس</label>
+ <textarea id="ft" rows="2" placeholder="مثلاً: دو تخم‌مرغ آبپز و یک تکه نان سنگک"></textarea>
+ <button onclick="calcFood()" ${busy?'disabled':''}>${busy==='food'?'در حال محاسبه...':'محاسبه‌ی کالری و ثبت'}</button>
+ ${err&&tab==='food'?`<p class="mu">${e(err)}</p>`:''}</div>
+ ${quick()}<div class="card">${d.foods.length?d.foods.map((x,i)=>`<div class="row"><div>${e(x.name)}</div><b>${f(x.kcal)}</b><button class="x" onclick="delFood(${i})">حذف</button></div>`).join(''):'<span class="mu">هنوز چیزی ثبت نشده.</span>'}</div>`;
+}
+async function calcFood(){
+ const t=$('#ft').value.trim();if(!t)return;
+ busy='food';err='';render();
+ try{
+  const r=await ai(`کاربر این‌ها را خورده: «${t}». هر مورد را جدا کن و کالری تقریبی آن را با توجه به مقدار گفته‌شده (اگر مقدار نگفته، یک وعده‌ی معمولی) حساب کن. فقط JSON برگردان: [{"name":"نام فارسی با مقدار","kcal":عدد}]`,true);
+  if(!Array.isArray(r))throw 0;
+  const d=day();r.forEach(x=>d.foods.push({name:String(x.name),kcal:Math.round(+x.kcal||0)}));save();
+ }catch(x){err=aiErr(x)}
+ busy='';render();
+}
+function delFood(i){day().foods.splice(i,1);save();render()}
+
+function tEl(){const t=S.timer;return t?t.acc+(t.run?Date.now()-t.st:0):0}
+function tStart(){const n=$('#sn').value.trim()||'مطالعه';S.timer={name:n,acc:0,st:Date.now(),run:true};save();render()}
+function tPause(){const t=S.timer;t.acc+=Date.now()-t.st;t.run=false;save();render()}
+function tResume(){const t=S.timer;t.st=Date.now();t.run=true;save();render()}
+function tStop(){const s=Math.round(tEl()/1000);if(s>=10)day().study.push({name:S.timer.name,sec:s});S.timer=null;save();render()}
+function tDrop(){S.timer=null;save();render()}
+function study(){
+ const d=day(),c=calc(),g=S.p.studyH*3600,t=S.timer;
+ SUBS=[...new Set(Object.values(S.d).flatMap(x=>x.study.map(y=>y.name)))].slice(-6);
+ return `<h1>📚 مطالعه</h1>
+ <div class="card" style="background:linear-gradient(135deg,#6d5dfc,#a855f7);color:#fff;border:0">
+ ${t?`<div style="text-align:center;opacity:.9">${e(t.name)}</div><div class="tm" id="tm">${hms(tEl()/1000)}</div>
+ ${t.run?'<button class="sec" onclick="tPause()">⏸ توقف موقت</button>':'<button class="sec" onclick="tResume()">▶️ ادامه</button>'}
+ <button class="dn" style="margin-top:8px" onclick="tStop()">⏹ پایان و ثبت</button>
+ <button class="x" style="width:100%;margin-top:6px;color:#fff;opacity:.8" onclick="tDrop()">لغو بدون ثبت</button>`
+ :`<div class="tm">${hms(0)}</div>
+ <input id="sn" placeholder="چه درسی می‌خونی؟ مثلاً ریاضی" style="color:#241f45;background:#fff">
+ ${SUBS.map((s,i)=>`<button class="chip" onclick="$('#sn').value=SUBS[${i}]">${e(s)}</button>`).join('')}
+ <button class="sec" style="margin-top:6px" onclick="tStart()">▶️ شروع مطالعه</button>`}</div>
+ <div class="card"><h2>امروز: ${dur(c.study)} از ${f1(S.p.studyH)} ساعت</h2><div class="bar"><i style="width:${Math.min(100,c.study/g*100)}%"></i></div>
+ <span class="mu">${c.study>=g?'آفرین! به هدف امروزت رسیدی 🎉':dur(g-c.study)+' دیگه مونده'}</span></div>
+ <div class="card"><h2>نشست‌های امروز</h2>${d.study.length?d.study.map((x,i)=>`<div class="row"><div>${e(x.name)}</div><b>${dur(x.sec)}</b><button class="x" onclick="delStudy(${i})">حذف</button></div>`).join(''):'<span class="mu">هنوز چیزی ثبت نشده.</span>'}</div>
+ <details class="card"><summary>افزودن دستی (اگه تایمر رو یادت رفت)</summary><div style="margin-top:10px"><input id="mn" placeholder="نام درس"><input id="mm" inputmode="decimal" placeholder="مدت به دقیقه"><button class="sec" onclick="addStudy()">ثبت</button></div></details>`;
+}
+function addStudy(){const n=$('#mn').value.trim()||'مطالعه',m=num($('#mm').value);if(!m)return;day().study.push({name:n,sec:m*60});save();render()}
+function delStudy(i){day().study.splice(i,1);save();render()}
+function coach(){
+ return `<h1>🤖 دستیار</h1><p class="mu">درباره‌ی ورزش، غذا، خواب یا برنامه‌ی درسی ازم بپرس.</p>
+ <div>${chat.map(m=>`<div class="msg ${m.role==='user'?'me':'bot'}">${e(m.content)}</div>`).join('')}${busy==='chat'?'<div class="msg bot">...</div>':''}</div>
+ <div class="card" style="margin-top:10px"><textarea id="ct" rows="2" placeholder="سؤالت رو بنویس"></textarea><button onclick="send()" ${busy?'disabled':''}>ارسال</button></div>`;
+}
+async function send(){
+ const t=$('#ct').value.trim();if(!t)return;
+ const c=calc();
+ const ctx=`تو دستیار مهربان یک برنامه‌ی روزانه هستی و فارسی و کوتاه جواب می‌دهی. کاربر: ${prof()}. امروز ${f(c.eaten)} کالری خورده، ${f(c.burned)} کالری سوزانده و ${dur(c.study)} درس خوانده. چون کاربر دانش‌آموز است، هیچ‌وقت رژیم‌های افراطی یا کالری خیلی کم توصیه نکن و در موارد پزشکی به پزشک ارجاع بده.\n\n`;
+ chat.push({role:'user',content:t});busy='chat';render();
+ try{
+  const h=chat.slice(-10).map(m=>({role:m.role,content:m.content}));
+  while(h[0].role!=='user')h.shift();
+  h[0]={role:'user',content:ctx+h[0].content};
+  chat.push({role:'assistant',content:await ai(h,false)});
+ }catch(x){chat.push({role:'assistant',content:aiErr(x)})}
+ busy='';render();
+}
+const tabs=[['home','🏠','خانه'],['plan','🗓️','برنامه'],['workout','🏋️','ورزش'],['food','🍽️','تغذیه'],['study','📚','مطالعه'],['report','📊','گزارش']];
+function render(){
+ if(!S.p)tab='profile';
+ $('#app').innerHTML=({home,plan,workout,food,study,coach,profile,report})[tab]();
+ const on=S.p&&tab!=='profile';
+ $('#nav').style.display=on?'flex':'none';
+ $('#nav').innerHTML=tabs.map(t=>`<button class="${tab===t[0]?'on':''}" onclick="tab='${t[0]}';err='';render();scrollTo(0,0)"><span>${IC[t[0]]}</span>${t[2]}</button>`).join('');
+}
+let selAct=0,fcat=0;
+const ACT=[['پیاده‌روی','🚶',3.5],['دویدن','🏃',9.8],['دوچرخه','🚴',7.5],['شنا','🏊',7],['بدنسازی','🏋️',5],['کششی','🤸',3],['یوگا','🧘',2.5],['فوتبال','⚽',7],['بسکتبال','🏀',6.5],['والیبال','🏐',4],['بوکس','🥊',7.8],['کوهنوردی','🧗',8]];
+function addAct(){const a=ACT[selAct],m=num($('#em').value);if(!m)return;day().extra.push({name:a[1]+' '+a[0]+' '+f(m)+' دقیقه',kcal:Math.round(a[2]*S.p.w*m/60)});save();render()}
+const FOODS={'صبحانه':[['🍞 نان سنگک (یک تکه)',150],['🥚 تخم‌مرغ آب‌پز (۱ عدد)',78],['🍳 املت (۲ تخم‌مرغ)',250],['🧀 پنیر (یک قوطی کبریت)',80],['🍯 عسل (یک قاشق)',60],['🥛 شیر (یک لیوان)',120],['☕ چای شیرین',40]],'غذا':[['🍚 چلوکباب کوبیده (۱ پرس)',850],['🍛 قورمه‌سبزی با برنج',650],['🍛 قیمه با برنج',700],['🍝 ماکارونی (۱ پرس)',550],['🍗 مرغ پخته (۱ ران)',250],['🥣 عدسی (۱ کاسه)',250],['🍔 همبرگر (۱ عدد)',500],['🍕 پیتزا (۱ برش)',280],['🍟 سیب‌زمینی سرخ‌کرده',350]],'میان‌وعده':[['🥜 گردو (۴ تا ۵ عدد)',100],['🌰 بادام (۱۰ عدد)',70],['🍫 شکلات (بسته‌ی کوچک)',150],['🥔 چیپس (بسته‌ی کوچک)',150],['🥣 ماست (۱ کاسه)',100],['🍪 بیسکویت (۱ عدد)',50]],'میوه و نوشیدنی':[['🍎 سیب (۱ عدد)',95],['🍌 موز (۱ عدد)',105],['🍊 پرتقال (۱ عدد)',65],['🍉 هندوانه (۱ برش)',90],['🥒 خیار (۱ عدد)',15],['🥤 دوغ (۱ لیوان)',60],['🥤 نوشابه (۱ قوطی)',140],['🧃 آب‌میوه (۱ لیوان)',110]]};
+function quick(){const cs=Object.keys(FOODS);return `<div class="card"><h2>⚡ انتخاب سریع غذا</h2><div>${cs.map((c,i)=>`<button class="chip ${i===fcat?'on':''}" onclick="fcat=${i};render()">${c}</button>`).join('')}</div>${FOODS[cs[fcat]].map((x,i)=>`<div class="row"><div>${x[0]}</div><span class="mu">${f(x[1])} کالری</span><button class="x" style="color:var(--pr)" onclick="qadd(${i})">＋</button></div>`).join('')}</div>`}
+function qadd(i){const x=FOODS[Object.keys(FOODS)[fcat]][i];day().foods.push({name:x[0],kcal:x[1]});save();render()}
+function setW(n){day().water=n;save();render()}
+function setH(id,v){day().hab[id]=v;save();render()}
+function addH(){const t=$('#nh').value.trim();if(!t)return;S.habits.push({id:Date.now(),t});save();render()}
+function delH(id){S.habits=S.habits.filter(h=>h.id!==id);save();render()}
+function habitsCard(){const d=day();return `<div class="card"><h2>💧 آب خوردن: ${f(d.water)} از ${f(8)} لیوان</h2><div class="gls">${[...Array(8).keys()].map(i=>`<button class="gl ${i<d.water?'on':''}" onclick="setW(${i+1===d.water?i:i+1})">💧</button>`).join('')}</div></div><div class="card"><h2>✅ عادت‌های امروز</h2>${S.habits.map(h=>`<label class="row" style="color:var(--tx);font-size:15px"><input type="checkbox" ${d.hab[h.id]?'checked':''} onchange="setH(${h.id},this.checked)"><div>${e(h.t)}</div><button class="x" onclick="event.preventDefault();delH(${h.id})">✕</button></label>`).join('')}<div style="display:flex;gap:8px;margin-top:10px"><input id="nh" placeholder="عادت جدید..." style="margin:0"><button class="sec" style="width:auto" onclick="addH()">＋</button></div></div>`}
+function dayStats(d){if(!d)return{e:0,b:0,s:0,h:0};return{e:d.foods.reduce((a,x)=>a+x.kcal,0),b:(d.plan?d.plan.exercises.reduce((a,x,i)=>a+(d.done[i]?x.kcal:0),0):0)+d.extra.reduce((a,x)=>a+x.kcal,0),s:d.study.reduce((a,x)=>a+x.sec,0)/3600,h:Object.values(d.hab||{}).filter(Boolean).length+((d.water||0)>=8?1:0)}}
+function bars(v,l,col,fm){const m=Math.max(...v,1e-9);return `<div style="display:flex;align-items:flex-end;gap:6px;height:120px">${v.map((x,i)=>`<div style="flex:1;text-align:center;font-size:10px;color:var(--mu)">${x?fm(x):'‌'}<div style="height:${Math.max(3,x/m*80)}px;background:${col};border-radius:8px 8px 3px 3px;margin:2px 0"></div>${l[i]}</div>`).join('')}</div>`}
+function report(){const L=[],E=[],B=[],T=[],H=[];for(let i=6;i>=0;i--){const t=new Date(Date.now()-i*864e5),k=t.getFullYear()+'-'+(t.getMonth()+1)+'-'+t.getDate(),s=dayStats(S.d[k]);L.push(t.toLocaleDateString('fa-IR',{weekday:'short'}));E.push(s.e);B.push(s.b);T.push(s.s);H.push(s.h)}
+const sm=a=>a.reduce((x,y)=>x+y,0),hit=T.filter(x=>x>=S.p.studyH).length;
+return `<h1>📊 گزارش هفتگی</h1><div class="g3" style="margin-bottom:12px"><div class="rb"><b>${f1(sm(T)/7)}</b><div>میانگین مطالعه (ساعت در روز)</div></div><div class="rb"><b>${f(sm(B))}</b><div>کالری سوزانده‌شده در هفته</div></div><div class="rb"><b>${f(hit)} از ${f(7)}</b><div>روز رسیدن به هدف مطالعه</div></div></div><div class="card"><h2>📚 مطالعه (ساعت)</h2>${bars(T,L,'linear-gradient(#a855f7,#6d5dfc)',f1)}</div><div class="card"><h2>🍽️ کالری خورده‌شده</h2>${bars(E,L,'linear-gradient(#fdba74,#f97316)',f)}</div><div class="card"><h2>🔥 کالری سوزانده‌شده</h2>${bars(B,L,'linear-gradient(#6ee7b7,#10b981)',f)}</div><div class="card"><h2>✅ عادت‌های انجام‌شده</h2>${bars(H,L,'linear-gradient(#93c5fd,#3b82f6)',f)}</div>`}
+const IC={home:'<svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',plan:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>',workout:'<svg viewBox="0 0 24 24"><path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/></svg>',food:'<svg viewBox="0 0 24 24"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10M17 3c-2 2-3 4.5-3 7s1 3 3 3v8"/></svg>',study:'<svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 19V5.5"/></svg>',report:'<svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>'};
+const LIB={'شکم':[['کرانچ','۳ ست × ۱۵ تکرار'],['پلانک','۳ ست × ۳۰ ثانیه'],['بالا آوردن پا','۳ ست × ۱۲ تکرار']],'پا':[['اسکات','۳ ست × ۱۵ تکرار'],['لانج','۳ ست × ۱۰ تکرار برای هر پا'],['پرش روی صندلی','۳ ست × ۱۲ تکرار']],'سینه':[['شنا','۳ ست × ۱۰ تکرار'],['پرس سینه با دمبل','۳ ست × ۱۲ تکرار']],'پشت':[['زیربغل دمبل','۳ ست × ۱۲ تکرار'],['سوپرمن','۳ ست × ۱۲ تکرار']],'دست':[['جلو بازو دمبل','۳ ست × ۱۲ تکرار'],['پشت بازو روی صندلی','۳ ست × ۱۰ تکرار']],'کاردیو':[['دویدن درجا','۳ دقیقه'],['جامپینگ جک','۳ ست × ۳۰ ثانیه'],['طناب‌زدن','۳ دقیقه']]};
+const KW={'شکم':'شکم|کرانچ|پلانک','پا':'پا|ران|اسکات|باسن','سینه':'سینه|شنا','پشت':'پشت|کمر|زیربغل','دست':'دست|بازو|شانه','کاردیو':'کاردیو|دویدن|چربی|لاغری|استقامت'};
+function offPlan(t){t=en(t);const mn=+(t.match(/(\d+)\s*(?:دقیقه|ساعت)/)||[])[1]||40,min=/ساعت/.test(t)?mn*60:mn;let gs=Object.keys(KW).filter(k=>new RegExp(KW[k]).test(t));if(!gs.length)gs=['پا','سینه','شکم','کاردیو'];const n=Math.max(3,Math.min(9,Math.round(min/8))),ex=[['گرم‌کردن و حرکات کششی','۵ دقیقه']];let i=0;while(ex.length<n+1&&i<60){const g=LIB[gs[i%gs.length]],x=g[Math.floor(i/gs.length)%g.length];if(!ex.some(y=>y[0]===x[0]))ex.push(x);i++}ex.push(['سردکردن و کشش','۵ دقیقه']);return{title:'برنامه‌ی ورزشی '+gs.join(' و '),exercises:ex.map(x=>({name:x[0],detail:x[1],kcal:Math.round(4.5*S.p.w*7/60)}))}}
+async function genPlan2(){
+ const t=($('#wd')||{}).value||'';S.wd=t;busy='plan';err='';save();render();let r=null;
+ try{
+  const dn=new Date().toLocaleDateString('fa-IR',{weekday:'long'});
+  r=await ai(`تو مربی بدنسازی هستی. کاربر: ${prof()}. امروز ${dn} است. توضیح و خواسته‌ی کاربر: «${t||'برنامه‌ی متعادل برای امروز'}». بر اساس همین توضیح یک برنامه‌ی ورزشی ایمن بساز (گرم‌کردن، حرکت‌های اصلی، سردکردن) و حرکت‌ها را متناسب با زمان و امکاناتی که گفته انتخاب کن. همه‌ی متن‌ها فارسی. فقط JSON: {"title":"عنوان کوتاه","exercises":[{"name":"نام حرکت","detail":"مثلاً ۳ ست × ۱۲ تکرار","kcal":عدد}]}`,true);
+  if(!r||!Array.isArray(r.exercises))throw 0;
+  r.exercises=r.exercises.map(x=>({name:String(x.name),detail:String(x.detail||''),kcal:Math.round(+x.kcal||0)}));
+ }catch(x){if(x&&x.code==='na'){r=offPlan(t);err='نسخه‌ی آفلاین: برنامه از روی کلمات توضیحت و حرکت‌های آماده ساخته شد.'}else{r=null;err=aiErr(x)}}
+ if(r){const d=day();d.plan=r;d.done={};save()}
+ busy='';render();
+}
+async function buildSched(){
+ const t=$('#sd').value.trim();if(!t)return;S.sd=t;busy='sched';err='';save();render();
+ try{
+  const r=await ai(`تو مشاور برنامه‌ریزی روزانه‌ی یک دانش‌آموز هستی. کاربر: ${prof()}. توضیح کاربر درباره‌ی روزش و خواسته‌هایش: «${t}». یک برنامه‌ی روزانه‌ی واقع‌گرایانه و متعادل بساز (بیدار شدن، مدرسه یا کلاس‌ها، مطالعه، ورزش، غذا، استراحت و خواب با حداقل ۸ ساعت). فقط JSON: {"wakeH":عدد,"wakeM":عدد,"gymH":عدد,"gymM":عدد,"sleepH":ساعت خواب,"studyH":هدف ساعت مطالعه,"blocks":[{"h":ساعت,"m":دقیقه,"title":"عنوان فارسی کوتاه"}]}`,true);
+  if(!r||!Array.isArray(r.blocks))throw 0;
+  const p=S.p,n=(v,d)=>Number.isFinite(+v)?+v:d,q=v=>[0,15,30,45].includes(+v)?+v:0;
+  p.wakeH=n(r.wakeH,p.wakeH);p.wakeM=q(r.wakeM);p.gymH=n(r.gymH,p.gymH);p.gymM=q(r.gymM);
+  p.sleepH=Math.min(10,Math.max(5,Math.round(n(r.sleepH,8)*2)/2));p.studyH=Math.min(10,Math.max(1,Math.round(n(r.studyH,3)*2)/2));
+  S.blocks=r.blocks.map(x=>({h:Math.min(23,Math.max(0,+x.h||0)),m:Math.min(59,Math.max(0,+x.m||0)),title:String(x.title)})).sort((a,b)=>a.h*60+a.m-(b.h*60+b.m));save();
+ }catch(x){err=aiErr(x)}
+ busy='';render();
+}
+function calCard(){const c=calc(),l=c.target-c.eaten+c.burned;return `<div class="card"><h2>⚡ کالری امروز</h2><div class="g3" style="text-align:center"><div><b style="font-size:20px">${f(c.eaten)}</b><div class="mu">مصرف‌شده</div></div><div><b style="font-size:20px">${f(c.burned)}</b><div class="mu">سوزانده‌شده</div></div><div><b style="font-size:20px;color:${l<0?'var(--wa)':'var(--ok)'}">${f(Math.abs(l))}</b><div class="mu">${l<0?'بیشتر از هدف':'باقی‌مانده'}</div></div></div><div class="bar"><i style="width:${Math.min(100,c.eaten/c.target*100)}%"></i></div><span class="mu">هدف روزانه: ${f(c.target)} کالری</span></div>`}
+function beep(){try{const a=new (window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator();o.connect(a.destination);o.frequency.value=880;o.start();setTimeout(()=>o.stop(),1500)}catch(x){}}
+setInterval(()=>{
+ if(S.timer&&S.timer.run&&tab==='study'){const el=$('#tm');if(el)el.textContent=hms(tEl()/1000)}
+ if(!S.p||!S.p.alarm)return;
+ const n=new Date(),is=n.getHours()===S.p.wakeH&&n.getMinutes()===S.p.wakeM;
+ if(is&&!rang){rang=true;ringNow=true;beep();if(tab==='home')render()}
+ if(!is)rang=false;
+},1000);
+render();
+if('serviceWorker' in navigator&&location.protocol.indexOf('http')===0)navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body>
+</html>
