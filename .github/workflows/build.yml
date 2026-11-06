@@ -2,7 +2,8 @@ name: Build APK
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -26,6 +27,12 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+
+      - name: Prepare web files
+        working-directory: rooznegar-github/rooznegar
+        run: |
+          mkdir -p www
+          cp index.html manifest.webmanifest sw.js www/
 
       - name: Install dependencies
         working-directory: rooznegar-github/rooznegar
